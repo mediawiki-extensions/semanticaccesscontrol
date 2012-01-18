@@ -1,0 +1,20 @@
+<noinclude>
+Permission information for a particular content page.
+</noinclude><includeonly>
+----
+{| class="wikitable"
+! PageId
+| [[ACL PageId::{{{PageId|}}}]]
+|-
+! PageName
+| [[ACL PageName::{{{PageName|}}}]]
+|-
+! Namespace
+| [[ACL Namespace::{{{Namespace|}}}]]
+|}
+----
+{{#ask: [[ACL Group permission for page::{{FULLPAGENAME}}]]|mainlabel=-|?ACL UserGroup|?ACL Permissions|?ACL Grant=Grant or Reject}}
+----
+{{#ask: [[ACL User permission for page::{{FULLPAGENAME}}]]|mainlabel=-|?ACL User|?ACL Permissions|?ACL Grant=Grant or Reject}}
+[[Category:ACL Page Permission]]
+</includeonly>

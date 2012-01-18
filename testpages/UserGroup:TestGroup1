@@ -1,0 +1,8 @@
+{{ACL UserGroup
+|GroupLeader=Test11
+|Users=Test12
+}}
+{{ACL UserGroup Permission
+|Permissions=read, write
+|Grant=Grant
+}}

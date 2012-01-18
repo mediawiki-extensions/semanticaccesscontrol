@@ -1,0 +1,16 @@
+<noinclude>
+{{#forminput:form=Department|link text=Create a department}}
+</noinclude><includeonly>
+{{{for template|Department|label=Department Information}}}
+{| class='wikitable'
+! Department Name
+| {{{field|Department Name|mandatory}}}
+|-
+! Department Primary Group
+| {{{field|Primary Group|mandatory|input type=SF_Select|function=allgroups:}}}
+|-
+! Department Sister Group
+| {{{field|Sister Groups|list|size=3|input type=SF_Select|function=allgroups:}}}
+|}
+{{{end template}}}
+</includeonly>

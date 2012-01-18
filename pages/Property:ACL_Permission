@@ -1,0 +1,6 @@
+Type is [[Has type::String]]
+* '''create''' is not supported right now. User is free to create any page.
+* [[Allows value::read]]: read permission.
+* [[Allows value::write]]: write permission.
+* '''delete''' is not supported right now. User can delete if he has write permission.
+* [[Allows value::grant]]: whether to give other user to manage permission for a content page.

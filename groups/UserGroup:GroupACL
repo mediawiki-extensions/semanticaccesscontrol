@@ -1,0 +1,7 @@
+'''The default ACL applied to members in a group'''
+{{ACL UserGroup
+}}
+{{ACL UserGroup Permission
+|Permissions=read,write
+|Grant=Grant
+}}

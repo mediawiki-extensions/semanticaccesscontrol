@@ -1,0 +1,4 @@
+'''The users in the Developers group'''. Users in this group can modify schema pages.
+{{ACL UserGroup
+|Users=x,y
+}}

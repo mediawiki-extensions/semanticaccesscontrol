@@ -1,0 +1,31 @@
+<noinclude>
+Define users in this group and the default Access rule.
+{{#forminput:form=ACL UserGroup|query string=action=formedit&namespace=UserGroup}}
+
+</noinclude><includeonly>
+<div id="wikiPreview" style="display: none; padding-bottom: 25px; margin-bottom: 25px; border-bottom: 1px solid #AAAAAA;"></div>
+{{{for template|ACL UserGroup|label=Members}}}
+{| class="formtable"
+! Group Leader
+| {{{field|GroupLeader|default=current user|input type=SF_Select|function=allusers:true }}}
+|-
+! Users:
+|{{{field|Users|list|size=10|input type=SF_Select|function=allusers:true }}}
+|}
+{{{end template}}}
+{{{for template|ACL UserGroup Permission|multiple|label=Permissions|add button text=Add Permission}}}
+{| class="formtable"
+|-
+! Permissions:
+| {{{field|Permissions|property=ACL_Permission|mandatory|input type=listbox}}}
+|-
+! Grant or Reject
+|{{{field|Grant|default=Grant|property=ACL Grant|input type=dropdown|mandatory}}}
+|}
+{{{end template}}}
+{{{standard input|summary}}}
+
+{{{standard input|minor edit}}} {{{standard input|watch}}}
+
+{{{standard input|save}}} {{{standard input|preview}}} {{{standard input|changes}}} {{{standard input|cancel}}}
+</includeonly>

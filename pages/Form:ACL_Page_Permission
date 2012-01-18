@@ -1,0 +1,51 @@
+<noinclude>
+Create or Edit the Permission settings for a page
+
+
+{{#forminput:form=ACL Permission|query string=namespace=ACL}}
+
+</noinclude><includeonly>
+<div id="wikiPreview" style="display: none; padding-bottom: 25px; margin-bottom: 25px; border-bottom: 1px solid #AAAAAA;"></div>
+{{{info |create title=Add Permission|edit title=Edit Permssion|page name=ACL:<ACL Page Permission[PageId]>}}}
+
+{{{for template|ACL Page Permission}}}{{{field|PageId|hidden}}}{{{field|PageName|hidden}}}{{{field|Namespace|hidden}}}{{{end template}}}
+
+=Group Permission=
+{{{for template|ACL Page Group Permission|multiple|label=Permissions for user group}}}
+{| class="formtable"
+! UserGroup:
+|{{{field|UserGroup|input type=SF_Select|function=allgroups: }}}
+|-
+! Permissions:
+|{{{field|Permission|property=ACL_Permission|mandatory|input type=listbox}}}
+|-
+! Grant or Reject
+|{{{field|Grant|default=Grant|property=ACL Grant|input type=dropdown|mandatory}}}
+|}
+{{{end template}}}
+
+
+=User Permission=
+{{{for template|ACL Page User Permission|multiple|label=Permissions for a specific user}}}
+{| class="formtable"
+! User:
+|{{{field|User|input type=SF_Select|function=allusers:true |default=current user}}}
+|-
+! Permissions:
+|{{{field|Permission|property=ACL_Permission|mandatory|input type=listbox}}}
+|-
+! Grant or Reject
+|{{{field|Grant|default=Grant|property=ACL Grant|input type=dropdown|mandatory}}}
+|}
+{{{end template}}}
+
+
+
+
+<headertabs/>
+{{{standard input|summary}}}
+
+{{{standard input|minor edit}}} {{{standard input|watch}}}
+
+{{{standard input|save}}} {{{standard input|preview}}} {{{standard input|changes}}} {{{standard input|cancel}}}
+</includeonly>

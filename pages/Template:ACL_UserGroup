@@ -1,0 +1,11 @@
+<noinclude>
+Users in A group and Group default access control rules.
+
+</noinclude><includeonly>
+Group Leader: [[ACL UserGroup Leader::{{{GroupLeader|}}}]]
+Users:{{#arraymap:{{{Users|}}}|,|x|[[ACL User::x]]}}
+----
+{{#ask: [[ACL Permission for a group::{{FULLPAGENAME}}]]|mainlabel=-|?ACL Permissions|?ACL Grant=Grant or Reject}}
+
+[[Category:ACL UserGroup]]
+</includeonly>

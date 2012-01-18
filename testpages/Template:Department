@@ -1,0 +1,32 @@
+<noinclude></noinclude><includeonly>
+{| class='wikitable'
+!Name
+|[[Department Name::{{{Department Name|}}}]]
+|-
+!Primary Group
+|[[Department Primary Group::{{{Primary Group}}}]]
+|-
+!Sister Groups
+|{{#arraymap:{{{Sister Groups|}}}|,|@@@|[[Department Sister Group::@@@]]}}
+|}
+
+{{ACL Page Group Permission
+|UserGroup={{{Primary Group}}}
+|Permission=write, read, grant
+|Grant=Grant
+}}
+{{#arraymap:{{{Sister Groups|}}}|,|@@@
+|{{ACL Page Group Permission
+|UserGroup=@@@
+|Permission=read
+|Grant=Grant
+}}
+}}
+{{ACL Page Group Permission
+|UserGroup=All Users
+|Permission=write, read, grant
+|Grant=Reject
+}}
+
+[[Category:Department]]
+<includeonly>

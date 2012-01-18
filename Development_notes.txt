@@ -1,0 +1,333 @@
+
+==Concept and Algorithm==
+
+  SemanticAccessControl by default only check pages in:
+
+  $ACL_CONTENT_Namespaces=array(NS_MAIN, NS_FILE, NS_USER);
+  $ACL_SCHEMA_Namespaces=array(NS_CATEGORY, NS_TEMPLATE, SMW_NS_CONCEPT, SMW_NS_PROPERTY, SF_NS_FORM);
+  $ACL_PERMISSION_Namespaces=array(ACL_NS_USERGROUP, ACL_NS_ACL);
+
+	Page type: 
+	  Schema pages:Form/Property/Template/Category/MediaWiki are pages designed to support the real content. 
+	  	They are not conventional content. These pages are like database schema in traditional application. They should 
+	  	be only visible to end user, and not editable by end user. 
+
+	  Content pages: pages in main namespace and other custom namespaces designed for end user contain content 
+	  	such as sample, run, and analysis. These pages are the focus of access control.
+
+		Usually content page has the owner: the creator of the page.
+
+
+	  Permission pages: We also have a set of pages used to support permission architecture itself.
+	    We have pages under ACL namespace for each content page if the content page has page-specific ACL.  
+		The page name is ACL:PAGE_ID. The page contains page-specific ACL.
+	    We have a set of UserGroup under UserGroup namespace. They define group-user relationship and default group's ACL.
+
+	  Each type of these pages has its own type-specific access control flow.
+
+	User and group association.
+	  A user can belong to multiple groups. 
+	  Here we have group page specification in UserGroup namespace. The group page specifies two things. 
+	  First, it specifies who it contains.
+	  Second, it specifies the default ACL for this group. Group can contain both pieces of information or one of them.
+
+	  We define several default groups here.
+	    SiteACL: All users belong to this group implicitly.  This page defines the ACL applying
+	     to all content pages. User's association specified in this page is ignored.
+
+		GroupACL: This page defines a default ACL for any group.  User's association specified in this page is ignored.
+
+	    Developers: Users who are in this pages have write permission for schema pages. 
+	    ACL defined in this page are ignored right now. (We could honor ACL later if needed).
+
+
+	Permission check algorithm. 
+	  Purpose:
+	    check whether end current user has sufficient permission to perform the requested action.
+	    Each action has a set of required permission associated with it. For example, View requires read permission. 
+	    Edit requires write permission. Delete requires write permission. Manipulating ACL requires grant permission.
+
+	    When an action comes in, we fetch the needed permission from various location. 
+	    We then check ACL to see whether the user has the required permission. 
+	    If he does, we grant permission. If it does not, we go to next step.
+
+	  First stage: shortcut.
+	  	Step 0: always give permission to user in bot, bureaucrat or sysop group. 
+	    Step 1: for page with page_id <=0, we grant access.  These are the skin pages, javascript pages, css pages.
+	    Step 3: Owner permission. If the end user is owner, the end user is granted access. Not further check is performed. 
+	    	Page could have logic owner. Logic owner enjoys the same privilege as owner.  For example, 
+					for a page like this {{Multiplex Library Plate|operator=user1}}, the creator would like to give
+					user1 total control the page. The Multiplex Library Plate template will set user1 as logic 
+					owner of this page implicitly. The semantic property to set logic owner is "ACL Page Owner"
+
+					logic owner has all permissions if the page has logic owner
+
+	  Second stage: Page classification.
+	    We decide what type of page the requested page is: schema page, content page, or permission page. 
+	    For each type of page, we select a particular algorithm.
+
+	  Third Stage type one:  Schema page access control flow.
+	    If the user belongs to Developers group, we give write permission, otherwise, we give read permission.
+
+	  Third stage type two: Permission page access control flow.
+	    For UserGroup pages, 
+	    	 super user (user in bot, bureaucrat, sysop) have write permission. 
+	    	 Group Leader has write permission.
+	    	 Other user has read permission
+
+	    For page-specific permission page (page under ACL namespace),    
+	      if the user has 'grant' permission, we give write permission.
+	      Otherwise, we give read permission. "Read" permission means 
+	      the user can view page-specific permission, but can not modify it.
+
+	  Third stage type three: Content page:
+		We go through the following steps one by one. If access is granted, we give permission. 
+		If access is denied, we deny access. Otherwise (there is no specification for the requester with regards 
+		to the requested permission), we go to next step.
+
+	    Step 1 page permission
+
+	    	step 1.1:  check the permission embedded in page content(static permission) 
+	    		These permission is typically set up by page template.
+				Page could also have logic group. The semantic property for this is "ACL Page Group". 
+					If page has logic group and current requester belongs to the logic group, the group acl is checked.
+
+				Page could be static content. Its content can not be editted once created. An invoice is one example. 
+					The semantic property for this property is ACL Page FXIED.
+
+			   Page could also embed some predefined user-acl or group-acl using template. These defined ACls are checked in this 
+			   step.
+	    			user-acl is set using template: Template:ACL Page User Permission.
+	    			group-acl is set using template: Template:ACL Page Group Permission.
+
+	    	step 1.2. Dynamically-defined Page-specific permission. Each page can have user-specific or group-specific ACL. 
+	    		If the current user is one of the specified user, or belongs to one of groups,  the corresponding permission is checked.
+	    	step 1.3:
+
+			    Page could also have a logic parent. This is like the traditional directory/file model. A file may delegate its 
+					permission check to parent directory.  For Example, give a page relationship: like this Project->Library Plate->Flowcell, 
+					The site administrator/user may want to set permission at Project level. All Library Plate and Flowcell Pages delegate
+					its permission check to Project they belong to. The library plate is like this
+					{{Multiplex Library Plate|Project=project1}}. The Multiplex Library Plate will set the project1 as 
+					page parent for ACL purpose implicitly. The semantic property to set page parent is "ACL Page Parent"		 
+				If the page has a parent, the check is forwarded to parent page and FLOW BELOW IS SKIPPED.
+
+	    Step 2. group permission. 
+	      Each page has an owner. For example, the owner belongs to  both sale and R&D groups. 
+	      If the current user belongs to one of the group, the group ACL is checked.  
+
+		  If the user is in one of the owner group, we also check 'GroupACL' (the default group policy). 
+
+	    Step 3 Global rule.
+	      Check 'SiteACL' access control rule. 
+
+	    Step 4. If we comes to this step, there is no rule defined for this user. We fall back to MediaWiki's rule.
+
+==Usage==
+
+	By default, the installation has no visible effects on the WikiLIMS. 
+	
+	First, you may need to configure site Access control rule. Edit UserGroup:SiteACL
+	
+	Example:
+	
+		{{ACL UserGroup
+		|Users=BioTeam
+		}}
+		{{ACL UserGroup Permission
+		|Permissions=write,grant
+		|Grant=Reject
+		}}
+		
+	The example above allows all content pages to be read by all. Another example:
+	
+		{{ACL UserGroup
+		|Users=BioTeam
+		}}
+		{{ACL UserGroup Permission
+		|Permissions=write,grant,read
+		|Grant=Reject
+		}}
+
+	In this example the content pages are blocked to all users ("reject read, reject write, reject grant").
+	
+	Second, you may want to set a default Access control rule for user in the same group. Edit UserGroup:GroupACL.
+	
+	Example:
+	
+		'''The default ACL applied to members in a group'''
+		{{ACL UserGroup
+		}}
+		{{ACL UserGroup Permission
+		|Permissions=read
+		|Grant=Grant
+		}}
+	
+	In this example all members of one group can read pages belonging to that group.
+	
+	Third, add developer user to UserGroup:Developers
+	
+	Example:
+	
+		'''The users in the Developers group'''. Users in this group can modify schema pages.
+		{{ACL UserGroup
+		|Users=BioTeam,Bioteam
+		}}
+	
+	Fourth, add Groups and define Access control properly. Go to AdminLink->Create Custom User Group.
+
+	Fifth, use the Property 'ACL Page Parent' to establish the inheritance of permissions from one 
+	parent page, for an example an Account (User:) page.
+	
+	Example:
+	
+		{{#set:ACL Page Parent=User:{{{Sample Has User|}}} }}
+
+	Sixth, Define content-specific ACL by adding ACL statement to Template.	
+	       
+	     Group specific permission can be added like this
+	       {{ACL Page Group Permission
+	       |UserGroup=All Users
+	       |Permission=write, read, grant
+	       |Grant=Reject
+	       }}
+	     User specific permission can be added like this
+	     {{ACL Page User Permission
+	     |User={{{PI}}}
+	     |Permission=read
+	     |Grant=Grant
+	     }}
+
+   SemanticAccessControl does not read or use the $wgWhitelistRead array so if you want all users to be able to
+   read a certain page this approach will not work. Instead put the page into a namespace that SemanticAccessControl
+   does not check, like Help:, for example.
+
+==Page ownership==
+
+ 	Ownership can be set by using the Property 'ACL Page Owner'. Example:
+
+ 
+
+
+==Extension configuration==
+
+		Check SemanticAccessControl.php. It is well-commented.
+
+
+==Access control override==
+
+$wgHooks["aclCheckPagePermission"][]=myHookFunction(&$requester, $action, &$title, $result);
+$requester: the requesting user object
+$action: what is requested.
+$title: the requested article title object.
+$result: 
+	set this value:
+	true: give access
+	false: deny access
+	1: Can not decide. Follow SemanticAccessControl normal checking flow.
+	other value: Can not decide. Skip SemanticAccessControl normal checking flow. Go to MediaWiki checking flow.
+return
+	false: continue to run other hook of the same type.
+	true: stop run other hook of the same type
+	
+In your implementation, you can use  ACL:checkPagePermission(...). It is a static function.
+	
+==LDAP user<->Group override=
+
+Loading group<->Users from external source such as LDAP
+$wgHooks["aclLoadGroups"][]=myHookFunction(&$groups)
+	Groups will be an array. The key is group name. The value is an array of username.
+
+return
+	false: continue to run other hook of the same type.
+	true: stop run other hook of the same type
+
+==Form:ACL_Page_Permission==
+
+	This form is launched when you click "Edit permission for this page" after selecting "Permission" from a page.
+	It is used to manage permissions for a page by user or by group. The 3 permissions available are
+	"read", "write", and "grant" and the Boolean applied to a permission is either "Grant" or "Reject". For example,
+	the Form may enter a Template call like this into the target page:
+
+	{{ACL Page Group Permission
+	|UserGroup=All Users
+	|Permission=write, read, grant
+	|Grant=Reject
+	}}
+
+	This code will block all access the the page ("reject read, reject write, reject grant") except for the owner and 
+	the super user.
+
+
+==Form:ACL_UserGroup==
+
+This form is launched when you click "Edit with form" on a UserGroup page and is also used to create new groups.
+
+
+==TEST CASE performed==
+
+Schema page
+	non-developer user can only view Schema page
+	Developer user edit/create schema page.
+	
+Permission page
+	UserGroup page (under UserGroup namespace)
+		super user can create/edit it.
+		group leader can edit it.
+		regular user can view it, but can not edit it.
+		
+	permission page(under ACL namespace)
+		Can not create a permission page for a nonexistent page
+		Owner can create/modify permission page
+		User with grant permission in content page can edit it
+		other user can view it
+		
+Content page
+	SiteACL is honored
+	GroupACL is honored.
+	Owner Group is honored
+	user-specific page permission is honored.
+	group-specific page permission is honored.
+	logic page owner is honored.
+	ACL Page Parent is honored.
+
+==Tricks and Tips==
+
+1. I have a group like R&D. I'd like to construct sub group such as Plant, Animal, etc. How can I do it? 
+There is not sub group support at this stage. Support can be added if needed. At current stage, you can define 
+	you sub group using a prefix:UserGroup:R_D_Plant, UserGroup:R_D_Animal, etc.
+2. Permission for Category. This can be accomplished by setting permission in the Template which creates page 
+	for  a specific category.
+
+==Example User Documentation in Wiki text==
+
+Access to pages is controlled by the SemanticAccessControl MediaWiki extension. By default no user has access to any "content" page, like a Sample, Request, or Project page. A user gets access to these  pages when they are made a member of a user group that has access granted to it. Setting up permissions for a user and the user's group is done like this:
+
+# Create an account for the leader of the group, this would usually be a PI (see [[Help:Contents#User_Administration]] for the details on creating Accounts)
+# Go to [[Form:ACL_UserGroup]] to create a new user group or click on "Create UserGroup" in the Sidebar. Type in the group name and click "Create or edit".
+#* One simple way to name groups is to name them after the PI of the lab, for example ''Xay44 Lab''. 
+# Select a leader for the new group (e.g. ''Xay44''), select the group members if there are any, then click "Add Permission"
+# Select "Read" and "Write", then choose "Grant" from the dropdown.
+# Do "Save page"
+
+You can return to this form when you want to add new members to this group. Or you can manage a user group by clicking on its name under the Access Control tab in the [[Administrator Home Page]].
+
+# Now return to the PI's Account page and select "Permission" from the menu next to "View history" in the upper right.
+# Click on "Set permission for this page", then click on "Add permission"
+# Select the UserGroup for this Account from the dropdown, then select "Read" and "Write", then choose "Grant" from the dropdown.
+# Do "Save page"
+
+That is all that is necessary as the Sample, Project, and Request pages inherit their permissions from the Account page.
+
+If you want to add a new user to an existing user group the steps are similar:
+
+# Create an account for the new user
+# Go the new Account page and select "Permission" from the menu next to "View history" in the upper right.
+# Click on "Edit permission for this page"
+# Select the UserGroup for this Account from the dropdown, then select "Read" and "Write", then choose "Grant" from the dropdown.
+# Do "Save page"
+
+
+
+
+

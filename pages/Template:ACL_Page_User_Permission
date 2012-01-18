@@ -1,0 +1,9 @@
+<noinclude>
+Edit the page to see the template text.
+</noinclude><includeonly>
+{{#set_internal:ACL User permission for page
+|ACL User={{{User}}}
+|ACL Permissions={{{Permission}}}
+|ACL Grant={{{Grant|Grant}}}
+}}
+</includeonly>
