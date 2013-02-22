@@ -63,7 +63,7 @@ class SMWUtil
 				$valuehash[$name]=$vs;	
 			}
 		}
-		//error_log(print_r($valuehash, true));
+		#error_log(print_r($valuehash, true));
 		return $valuehash;	
 		
 	}
@@ -95,7 +95,9 @@ class SMWUtil
 			#remove namespace prefix.
 			$sio=preg_replace("/^[^:]+:/", "", $sio);
 			$sio=str_replace(" ", "_", $sio);
-			array_push($ret, self::loadSemanticProperties($sio, $namespace, false));
+			#remove fragment to -
+			#$sio=str_replace("#", "-23", $sio);
+			array_push($ret, self::loadSemanticProperties($sio, $namespace, true));
 		}
 		
 		return $ret;
