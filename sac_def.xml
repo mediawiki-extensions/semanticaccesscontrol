@@ -1,0 +1,730 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.7/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.7/ http://www.mediawiki.org/xml/export-0.7.xsd" version="0.7" xml:lang="en">
+  <siteinfo>
+    <sitename>flexwiki</sitename>
+    <base>http://demo.flexdms.com/wiki/index.php/Main_Page</base>
+    <generator>MediaWiki 1.20.2</generator>
+    <case>first-letter</case>
+    <namespaces>
+      <namespace key="-2" case="first-letter">Media</namespace>
+      <namespace key="-1" case="first-letter">Special</namespace>
+      <namespace key="0" case="first-letter" />
+      <namespace key="1" case="first-letter">Talk</namespace>
+      <namespace key="2" case="first-letter">User</namespace>
+      <namespace key="3" case="first-letter">User talk</namespace>
+      <namespace key="4" case="first-letter">Project</namespace>
+      <namespace key="5" case="first-letter">Project talk</namespace>
+      <namespace key="6" case="first-letter">File</namespace>
+      <namespace key="7" case="first-letter">File talk</namespace>
+      <namespace key="8" case="first-letter">MediaWiki</namespace>
+      <namespace key="9" case="first-letter">MediaWiki talk</namespace>
+      <namespace key="10" case="first-letter">Template</namespace>
+      <namespace key="11" case="first-letter">Template talk</namespace>
+      <namespace key="12" case="first-letter">Help</namespace>
+      <namespace key="13" case="first-letter">Help talk</namespace>
+      <namespace key="14" case="first-letter">Category</namespace>
+      <namespace key="15" case="first-letter">Category talk</namespace>
+      <namespace key="102" case="first-letter">Property</namespace>
+      <namespace key="103" case="first-letter">Property talk</namespace>
+      <namespace key="106" case="first-letter">Form</namespace>
+      <namespace key="107" case="first-letter">Form talk</namespace>
+      <namespace key="108" case="first-letter">Concept</namespace>
+      <namespace key="109" case="first-letter">Concept talk</namespace>
+      <namespace key="160" case="first-letter">UserGroup</namespace>
+      <namespace key="162" case="first-letter">ACL</namespace>
+    </namespaces>
+  </siteinfo>
+  <page>
+    <title>Property:ACL Group permission for page</title>
+    <ns>102</ns>
+    <id>130</id>
+    <revision>
+      <id>137</id>
+      <timestamp>2013-02-22T05:59:20Z</timestamp>
+      <contributor>
+        <username>Jason</username>
+        <id>1</id>
+      </contributor>
+      <minor/>
+      <comment>BOT: Changing page text</comment>
+      <sha1>byqsaznmj8muv1x9qm7hky0dlasesr9</sha1>
+      <text xml:space="preserve" bytes="18">[[Has type::Page]]</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:ACL UserGroup Permission</title>
+    <ns>10</ns>
+    <id>140</id>
+    <revision>
+      <id>147</id>
+      <timestamp>2013-02-22T05:59:22Z</timestamp>
+      <contributor>
+        <username>Jason</username>
+        <id>1</id>
+      </contributor>
+      <minor/>
+      <comment>BOT: Changing page text</comment>
+      <sha1>j6tqgqmfua2jc9zia6h5zf66c0bzwur</sha1>
+      <text xml:space="preserve" bytes="202">&lt;noinclude&gt;
+Edit the page to see the template text.
+&lt;/noinclude&gt;&lt;includeonly&gt;
+{{#set_internal:ACL Permission for a group
+|ACL Permissions={{{Permissions}}}
+|ACL Grant={{{Grant|Grant}}}
+}}
+&lt;/includeonly&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Property:ACL Permissions</title>
+    <ns>102</ns>
+    <id>142</id>
+    <revision>
+      <id>149</id>
+      <timestamp>2013-02-22T05:59:23Z</timestamp>
+      <contributor>
+        <username>Jason</username>
+        <id>1</id>
+      </contributor>
+      <minor/>
+      <comment>BOT: Changing page text</comment>
+      <sha1>4qq6cuutoa3imisl8utrduwz15crhq4</sha1>
+      <text xml:space="preserve" bytes="48">This is a property of type [[Has type::String]].</text>
+    </revision>
+  </page>
+  <page>
+    <title>Property:ACL Page Fixed</title>
+    <ns>102</ns>
+    <id>127</id>
+    <revision>
+      <id>134</id>
+      <timestamp>2013-02-22T05:59:19Z</timestamp>
+      <contributor>
+        <username>Jason</username>
+        <id>1</id>
+      </contributor>
+      <minor/>
+      <comment>BOT: Changing page text</comment>
+      <sha1>5sjgyxh233abn9tfe2h4s0ob1071v8z</sha1>
+      <text xml:space="preserve" bytes="20">[[Has type::String]]</text>
+    </revision>
+  </page>
+  <page>
+    <title>Property:ACL User permission for page</title>
+    <ns>102</ns>
+    <id>135</id>
+    <revision>
+      <id>142</id>
+      <timestamp>2013-02-22T05:59:21Z</timestamp>
+      <contributor>
+        <username>Jason</username>
+        <id>1</id>
+      </contributor>
+      <minor/>
+      <comment>BOT: Changing page text</comment>
+      <sha1>byqsaznmj8muv1x9qm7hky0dlasesr9</sha1>
+      <text xml:space="preserve" bytes="18">[[Has type::Page]]</text>
+    </revision>
+  </page>
+  <page>
+    <title>Property:ACL Page Group</title>
+    <ns>102</ns>
+    <id>147</id>
+    <revision>
+      <id>154</id>
+      <timestamp>2013-02-22T05:59:24Z</timestamp>
+      <contributor>
+        <username>Jason</username>
+        <id>1</id>
+      </contributor>
+      <minor/>
+      <comment>BOT: Changing page text</comment>
+      <sha1>5sjgyxh233abn9tfe2h4s0ob1071v8z</sha1>
+      <text xml:space="preserve" bytes="20">[[Has type::String]]</text>
+    </revision>
+  </page>
+  <page>
+    <title>Property:ACL Permission</title>
+    <ns>102</ns>
+    <id>146</id>
+    <revision>
+      <id>153</id>
+      <timestamp>2013-02-22T05:59:24Z</timestamp>
+      <contributor>
+        <username>Jason</username>
+        <id>1</id>
+      </contributor>
+      <minor/>
+      <comment>BOT: Changing page text</comment>
+      <sha1>5mq6u24yxzc2jkyib00th7f35g4nlqu</sha1>
+      <text xml:space="preserve" bytes="374">Type is [[Has type::String]]
+* '''create''' is not supported right now. User is free to create any page.
+* [[Allows value::read]]: read permission.
+* [[Allows value::write]]: write permission.
+* '''delete''' is not supported right now. User can delete if he has write permission.
+* [[Allows value::grant]]: whether to give other user to manage permission for a content page.</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:ACL Page Group Permission</title>
+    <ns>10</ns>
+    <id>151</id>
+    <revision>
+      <id>158</id>
+      <timestamp>2013-02-22T05:59:25Z</timestamp>
+      <contributor>
+        <username>Jason</username>
+        <id>1</id>
+      </contributor>
+      <minor/>
+      <comment>BOT: Changing page text</comment>
+      <sha1>6420udst3eo3p4fm5700fy2rwn5lchy</sha1>
+      <text xml:space="preserve" bytes="235">&lt;noinclude&gt;
+Edit the page to see the template text.
+&lt;/noinclude&gt;&lt;includeonly&gt;
+{{#set_internal:ACL Group permission for page
+|ACL UserGroup={{{UserGroup}}}
+|ACL Permissions={{{Permission}}}
+|ACL Grant={{{Grant|Grant}}}
+}}
+&lt;/includeonly&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:ACL UserGroup</title>
+    <ns>10</ns>
+    <id>144</id>
+    <revision>
+      <id>151</id>
+      <timestamp>2013-02-22T05:59:23Z</timestamp>
+      <contributor>
+        <username>Jason</username>
+        <id>1</id>
+      </contributor>
+      <minor/>
+      <comment>BOT: Changing page text</comment>
+      <sha1>axk2jvc0t9wfcgdx27869qbzu8xlci4</sha1>
+      <text xml:space="preserve" bytes="370">&lt;noinclude&gt;
+Users in A group and Group default access control rules.
+
+&lt;/noinclude&gt;&lt;includeonly&gt;
+Group Leader: [[ACL UserGroup Leader::{{{GroupLeader|}}}]]
+Users:{{#arraymap:{{{Users|}}}|,|x|[[ACL User::x]]}}
+----
+{{#ask: [[ACL Permission for a group::{{FULLPAGENAME}}]]|mainlabel=-|?ACL Permissions|?ACL Grant=Grant or Reject}}
+
+[[Category:ACL UserGroup]]
+&lt;/includeonly&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Property:ACL Page Owner</title>
+    <ns>102</ns>
+    <id>126</id>
+    <revision>
+      <id>133</id>
+      <timestamp>2013-02-22T05:59:19Z</timestamp>
+      <contributor>
+        <username>Jason</username>
+        <id>1</id>
+      </contributor>
+      <minor/>
+      <comment>BOT: Changing page text</comment>
+      <sha1>5sjgyxh233abn9tfe2h4s0ob1071v8z</sha1>
+      <text xml:space="preserve" bytes="20">[[Has type::String]]</text>
+    </revision>
+  </page>
+  <page>
+    <title>Property:ACL Namespace</title>
+    <ns>102</ns>
+    <id>149</id>
+    <revision>
+      <id>156</id>
+      <timestamp>2013-02-22T05:59:24Z</timestamp>
+      <contributor>
+        <username>Jason</username>
+        <id>1</id>
+      </contributor>
+      <minor/>
+      <comment>BOT: Changing page text</comment>
+      <sha1>4qq6cuutoa3imisl8utrduwz15crhq4</sha1>
+      <text xml:space="preserve" bytes="48">This is a property of type [[Has type::String]].</text>
+    </revision>
+  </page>
+  <page>
+    <title>Property:ACL Grant</title>
+    <ns>102</ns>
+    <id>145</id>
+    <revision>
+      <id>152</id>
+      <timestamp>2013-02-22T05:59:23Z</timestamp>
+      <contributor>
+        <username>Jason</username>
+        <id>1</id>
+      </contributor>
+      <minor/>
+      <comment>BOT: Changing page text</comment>
+      <sha1>8p7b2vlh8iz8yfgcvjoms5i8hf3q20t</sha1>
+      <text xml:space="preserve" bytes="79">Type is [[Has type::String]]
+*[[Allows value::Grant]]
+*[[Allows value::Reject]]</text>
+    </revision>
+  </page>
+  <page>
+    <title>Property:ACL Permission for a group</title>
+    <ns>102</ns>
+    <id>128</id>
+    <revision>
+      <id>135</id>
+      <timestamp>2013-02-22T05:59:19Z</timestamp>
+      <contributor>
+        <username>Jason</username>
+        <id>1</id>
+      </contributor>
+      <minor/>
+      <comment>BOT: Changing page text</comment>
+      <sha1>byqsaznmj8muv1x9qm7hky0dlasesr9</sha1>
+      <text xml:space="preserve" bytes="18">[[Has type::Page]]</text>
+    </revision>
+  </page>
+  <page>
+    <title>Property:ACL Page Parent</title>
+    <ns>102</ns>
+    <id>153</id>
+    <revision>
+      <id>160</id>
+      <timestamp>2013-02-22T05:59:25Z</timestamp>
+      <contributor>
+        <username>Jason</username>
+        <id>1</id>
+      </contributor>
+      <minor/>
+      <comment>BOT: Changing page text</comment>
+      <sha1>byqsaznmj8muv1x9qm7hky0dlasesr9</sha1>
+      <text xml:space="preserve" bytes="18">[[Has type::Page]]</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:ACL Page Permission</title>
+    <ns>10</ns>
+    <id>129</id>
+    <revision>
+      <id>136</id>
+      <timestamp>2013-02-22T05:59:20Z</timestamp>
+      <contributor>
+        <username>Jason</username>
+        <id>1</id>
+      </contributor>
+      <minor/>
+      <comment>BOT: Changing page text</comment>
+      <sha1>ouz38lh0q4n5mhawdi41oya1lwhjc8j</sha1>
+      <text xml:space="preserve" bytes="582">&lt;noinclude&gt;
+Permission information for a particular content page.
+&lt;/noinclude&gt;&lt;includeonly&gt;
+----
+{| class=&quot;wikitable&quot;
+! PageId
+| [[ACL PageId::{{{PageId|}}}]]
+|-
+! PageName
+| [[ACL PageName::{{{PageName|}}}]]
+|-
+! Namespace
+| [[ACL Namespace::{{{Namespace|}}}]]
+|}
+----
+{{#ask: [[ACL Group permission for page::{{FULLPAGENAME}}]]|mainlabel=-|?ACL UserGroup|?ACL Permissions|?ACL Grant=Grant or Reject}}
+----
+{{#ask: [[ACL User permission for page::{{FULLPAGENAME}}]]|mainlabel=-|?ACL User|?ACL Permissions|?ACL Grant=Grant or Reject}}
+[[Category:ACL Page Permission]]
+&lt;/includeonly&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Property:ACL PageId</title>
+    <ns>102</ns>
+    <id>152</id>
+    <revision>
+      <id>159</id>
+      <timestamp>2013-02-22T05:59:25Z</timestamp>
+      <contributor>
+        <username>Jason</username>
+        <id>1</id>
+      </contributor>
+      <minor/>
+      <comment>BOT: Changing page text</comment>
+      <sha1>id8gn0keu2a1u84x5rhv7b3oxwkgls6</sha1>
+      <text xml:space="preserve" bytes="48">This is a property of type [[Has type::Number]].</text>
+    </revision>
+  </page>
+  <page>
+    <title>Form:ACL Page Permission</title>
+    <ns>106</ns>
+    <id>132</id>
+    <revision>
+      <id>139</id>
+      <timestamp>2013-02-22T05:59:20Z</timestamp>
+      <contributor>
+        <username>Jason</username>
+        <id>1</id>
+      </contributor>
+      <minor/>
+      <comment>BOT: Changing page text</comment>
+      <sha1>iwqssd0ygmks6ts4j1h29nbf3i9f3h8</sha1>
+      <text xml:space="preserve" bytes="1634">&lt;noinclude&gt;
+Create or Edit the Permission settings for a page
+
+
+{{#forminput:form=ACL Permission|query string=namespace=ACL}}
+
+&lt;/noinclude&gt;&lt;includeonly&gt;
+&lt;div id=&quot;wikiPreview&quot; style=&quot;display: none; padding-bottom: 25px; margin-bottom: 25px; border-bottom: 1px solid #AAAAAA;&quot;&gt;&lt;/div&gt;
+{{{info |create title=Add Permission|edit title=Edit Permssion|page name=ACL:&lt;ACL Page Permission[PageId]&gt;}}}
+
+{{{for template|ACL Page Permission}}}{{{field|PageId|hidden}}}{{{field|PageName|hidden}}}{{{field|Namespace|hidden}}}{{{end template}}}
+
+=Group Permission=
+{{{for template|ACL Page Group Permission|multiple|label=Permissions for user group}}}
+{| class=&quot;formtable&quot;
+! UserGroup:
+|{{{field|UserGroup|input type=SF_Select|function=allgroups: }}}
+|-
+! Permissions:
+|{{{field|Permission|property=ACL_Permission|mandatory|input type=listbox}}}
+|-
+! Grant or Reject
+|{{{field|Grant|default=Grant|property=ACL Grant|input type=dropdown|mandatory}}}
+|}
+{{{end template}}}
+
+
+=User Permission=
+{{{for template|ACL Page User Permission|multiple|label=Permissions for a specific user}}}
+{| class=&quot;formtable&quot;
+! User:
+|{{{field|User|input type=SF_Select|function=allusers:true |default=current user}}}
+|-
+! Permissions:
+|{{{field|Permission|property=ACL_Permission|mandatory|input type=listbox}}}
+|-
+! Grant or Reject
+|{{{field|Grant|default=Grant|property=ACL Grant|input type=dropdown|mandatory}}}
+|}
+{{{end template}}}
+
+
+
+
+&lt;headertabs/&gt;
+{{{standard input|summary}}}
+
+{{{standard input|minor edit}}} {{{standard input|watch}}}
+
+{{{standard input|save}}} {{{standard input|preview}}} {{{standard input|changes}}} {{{standard input|cancel}}}
+&lt;/includeonly&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:ACL Page User Permission</title>
+    <ns>10</ns>
+    <id>131</id>
+    <revision>
+      <id>138</id>
+      <timestamp>2013-02-22T05:59:20Z</timestamp>
+      <contributor>
+        <username>Jason</username>
+        <id>1</id>
+      </contributor>
+      <minor/>
+      <comment>BOT: Changing page text</comment>
+      <sha1>isaq7sm7co10kmxeodnjircovtp6qcx</sha1>
+      <text xml:space="preserve" bytes="224">&lt;noinclude&gt;
+Edit the page to see the template text.
+&lt;/noinclude&gt;&lt;includeonly&gt;
+{{#set_internal:ACL User permission for page
+|ACL User={{{User}}}
+|ACL Permissions={{{Permission}}}
+|ACL Grant={{{Grant|Grant}}}
+}}
+&lt;/includeonly&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Property:ACL User</title>
+    <ns>102</ns>
+    <id>139</id>
+    <revision>
+      <id>146</id>
+      <timestamp>2013-02-22T05:59:22Z</timestamp>
+      <contributor>
+        <username>Jason</username>
+        <id>1</id>
+      </contributor>
+      <minor/>
+      <comment>BOT: Changing page text</comment>
+      <sha1>4qq6cuutoa3imisl8utrduwz15crhq4</sha1>
+      <text xml:space="preserve" bytes="48">This is a property of type [[Has type::String]].</text>
+    </revision>
+  </page>
+  <page>
+    <title>Property:ACL UserGroup Leader</title>
+    <ns>102</ns>
+    <id>150</id>
+    <revision>
+      <id>157</id>
+      <timestamp>2013-02-22T05:59:25Z</timestamp>
+      <contributor>
+        <username>Jason</username>
+        <id>1</id>
+      </contributor>
+      <minor/>
+      <comment>BOT: Changing page text</comment>
+      <sha1>5sjgyxh233abn9tfe2h4s0ob1071v8z</sha1>
+      <text xml:space="preserve" bytes="20">[[Has type::String]]</text>
+    </revision>
+  </page>
+  <page>
+    <title>Category:ACL UserGroup</title>
+    <ns>14</ns>
+    <id>148</id>
+    <revision>
+      <id>155</id>
+      <timestamp>2013-02-22T05:59:24Z</timestamp>
+      <contributor>
+        <username>Jason</username>
+        <id>1</id>
+      </contributor>
+      <minor/>
+      <comment>BOT: Changing page text</comment>
+      <sha1>e9wo30r3i14654jhgui42msvjt2kok5</sha1>
+      <text xml:space="preserve" bytes="64">This category uses the form [[Has default form::ACL UserGroup]].</text>
+    </revision>
+  </page>
+  <page>
+    <title>Form:ACL UserGroup</title>
+    <ns>106</ns>
+    <id>154</id>
+    <revision>
+      <id>161</id>
+      <timestamp>2013-02-22T05:59:25Z</timestamp>
+      <contributor>
+        <username>Jason</username>
+        <id>1</id>
+      </contributor>
+      <minor/>
+      <comment>BOT: Changing page text</comment>
+      <sha1>ljdrxfdi6aokj5j4s5hde7i2pn5o758</sha1>
+      <text xml:space="preserve" bytes="1154">&lt;noinclude&gt;
+Define users in this group and the default Access rule.
+{{#forminput:form=ACL UserGroup|query string=action=formedit&amp;namespace=UserGroup}}
+
+&lt;/noinclude&gt;&lt;includeonly&gt;
+&lt;div id=&quot;wikiPreview&quot; style=&quot;display: none; padding-bottom: 25px; margin-bottom: 25px; border-bottom: 1px solid #AAAAAA;&quot;&gt;&lt;/div&gt;
+{{{for template|ACL UserGroup|label=Members}}}
+{| class=&quot;formtable&quot;
+! Group Leader
+| {{{field|GroupLeader|default=current user|input type=SF_Select|function=allusers:true }}}
+|-
+! Users:
+|{{{field|Users|list|size=10|input type=SF_Select|function=allusers:true }}}
+|}
+{{{end template}}}
+{{{for template|ACL UserGroup Permission|multiple|label=Permissions|add button text=Add Permission}}}
+{| class=&quot;formtable&quot;
+|-
+! Permissions:
+| {{{field|Permissions|property=ACL_Permission|mandatory|input type=listbox}}}
+|-
+! Grant or Reject
+|{{{field|Grant|default=Grant|property=ACL Grant|input type=dropdown|mandatory}}}
+|}
+{{{end template}}}
+{{{standard input|summary}}}
+
+{{{standard input|minor edit}}} {{{standard input|watch}}}
+
+{{{standard input|save}}} {{{standard input|preview}}} {{{standard input|changes}}} {{{standard input|cancel}}}
+&lt;/includeonly&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Property:ACL PageName</title>
+    <ns>102</ns>
+    <id>143</id>
+    <revision>
+      <id>150</id>
+      <timestamp>2013-02-22T05:59:23Z</timestamp>
+      <contributor>
+        <username>Jason</username>
+        <id>1</id>
+      </contributor>
+      <minor/>
+      <comment>BOT: Changing page text</comment>
+      <sha1>jk9aupditbfg4coza27xh6berm5n0sp</sha1>
+      <text xml:space="preserve" bytes="46">This is a property of type [[Has type::Page]].</text>
+    </revision>
+  </page>
+  <page>
+    <title>Category:ACL Page Permission</title>
+    <ns>14</ns>
+    <id>137</id>
+    <revision>
+      <id>144</id>
+      <timestamp>2013-02-22T05:59:22Z</timestamp>
+      <contributor>
+        <username>Jason</username>
+        <id>1</id>
+      </contributor>
+      <minor/>
+      <comment>BOT: Changing page text</comment>
+      <sha1>ovy7ljvv7dlp4yr89qy8gsvpbk94anh</sha1>
+      <text xml:space="preserve" bytes="70">This category uses the form [[Has default form::ACL Page Permission]].</text>
+    </revision>
+  </page>
+  <page>
+    <title>Property:ACL PrimaryGroup</title>
+    <ns>102</ns>
+    <id>141</id>
+    <revision>
+      <id>148</id>
+      <timestamp>2013-02-22T05:59:23Z</timestamp>
+      <contributor>
+        <username>Jason</username>
+        <id>1</id>
+      </contributor>
+      <minor/>
+      <comment>BOT: Changing page text</comment>
+      <sha1>jk9aupditbfg4coza27xh6berm5n0sp</sha1>
+      <text xml:space="preserve" bytes="46">This is a property of type [[Has type::Page]].</text>
+    </revision>
+  </page>
+  <page>
+    <title>Project:UserGroup</title>
+    <ns>4</ns>
+    <id>136</id>
+    <revision>
+      <id>143</id>
+      <timestamp>2013-02-22T05:59:21Z</timestamp>
+      <contributor>
+        <username>Jason</username>
+        <id>1</id>
+      </contributor>
+      <minor/>
+      <comment>BOT: Changing page text</comment>
+      <sha1>5igi5qzqs78ymt3i9uvnggd4gb3z9h5</sha1>
+      <text xml:space="preserve" bytes="35">[[Has default form::ACL UserGroup]]</text>
+    </revision>
+  </page>
+  <page>
+    <title>Project:ACL</title>
+    <ns>4</ns>
+    <id>138</id>
+    <revision>
+      <id>145</id>
+      <timestamp>2013-02-22T05:59:22Z</timestamp>
+      <contributor>
+        <username>Jason</username>
+        <id>1</id>
+      </contributor>
+      <minor/>
+      <comment>BOT: Changing page text</comment>
+      <sha1>r4porvozmi1fl9ogiievi9dyanb3ncq</sha1>
+      <text xml:space="preserve" bytes="41">[[Has default form::ACL Page Permission]]</text>
+    </revision>
+  </page>
+  <page>
+    <title>Property:ACL UserGroup</title>
+    <ns>102</ns>
+    <id>133</id>
+    <revision>
+      <id>140</id>
+      <timestamp>2013-02-22T05:59:21Z</timestamp>
+      <contributor>
+        <username>Jason</username>
+        <id>1</id>
+      </contributor>
+      <minor/>
+      <comment>BOT: Changing page text</comment>
+      <sha1>4qq6cuutoa3imisl8utrduwz15crhq4</sha1>
+      <text xml:space="preserve" bytes="48">This is a property of type [[Has type::String]].</text>
+    </revision>
+  </page>
+  <page>
+    <title>Property:ACL Users</title>
+    <ns>102</ns>
+    <id>134</id>
+    <revision>
+      <id>141</id>
+      <timestamp>2013-02-22T05:59:21Z</timestamp>
+      <contributor>
+        <username>Jason</username>
+        <id>1</id>
+      </contributor>
+      <minor/>
+      <comment>BOT: Changing page text</comment>
+      <sha1>4qq6cuutoa3imisl8utrduwz15crhq4</sha1>
+      <text xml:space="preserve" bytes="48">This is a property of type [[Has type::String]].</text>
+    </revision>
+  </page>
+  <page>
+    <title>UserGroup:GroupACL</title>
+    <ns>160</ns>
+    <id>157</id>
+    <revision>
+      <id>164</id>
+      <timestamp>2013-02-22T05:59:31Z</timestamp>
+      <contributor>
+        <username>Jason</username>
+        <id>1</id>
+      </contributor>
+      <minor/>
+      <comment>BOT: Changing page text</comment>
+      <sha1>r6n7tim0iw4wei25o5heuh2djalaish</sha1>
+      <text xml:space="preserve" bytes="137">'''The default ACL applied to members in a group'''
+{{ACL UserGroup
+}}
+{{ACL UserGroup Permission
+|Permissions=read,write
+|Grant=Grant
+}}</text>
+    </revision>
+  </page>
+  <page>
+    <title>UserGroup:SiteACL</title>
+    <ns>160</ns>
+    <id>155</id>
+    <revision>
+      <id>162</id>
+      <timestamp>2013-02-22T05:59:30Z</timestamp>
+      <contributor>
+        <username>Jason</username>
+        <id>1</id>
+      </contributor>
+      <minor/>
+      <comment>BOT: Changing page text</comment>
+      <sha1>rlq4jf2blfx8gtidqphrhfd3xrbf689</sha1>
+      <text xml:space="preserve" bytes="29">{{ACL UserGroup
+|Users=xxx
+}}</text>
+    </revision>
+  </page>
+  <page>
+    <title>UserGroup:Developers</title>
+    <ns>160</ns>
+    <id>156</id>
+    <revision>
+      <id>163</id>
+      <timestamp>2013-02-22T05:59:30Z</timestamp>
+      <contributor>
+        <username>Jason</username>
+        <id>1</id>
+      </contributor>
+      <minor/>
+      <comment>BOT: Changing page text</comment>
+      <sha1>04i8galm5ihs252v6l6wignnkf8qlg9</sha1>
+      <text xml:space="preserve" bytes="115">'''The users in the Developers group'''. Users in this group can modify schema pages.
+{{ACL UserGroup
+|Users=x,y
+}}</text>
+    </revision>
+  </page>
+</mediawiki>

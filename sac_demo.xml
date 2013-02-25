@@ -1,0 +1,372 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.7/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.7/ http://www.mediawiki.org/xml/export-0.7.xsd" version="0.7" xml:lang="en">
+  <siteinfo>
+    <sitename>flexwiki</sitename>
+    <base>http://demo.flexdms.com/wiki/index.php/Main_Page</base>
+    <generator>MediaWiki 1.20.2</generator>
+    <case>first-letter</case>
+    <namespaces>
+      <namespace key="-2" case="first-letter">Media</namespace>
+      <namespace key="-1" case="first-letter">Special</namespace>
+      <namespace key="0" case="first-letter" />
+      <namespace key="1" case="first-letter">Talk</namespace>
+      <namespace key="2" case="first-letter">User</namespace>
+      <namespace key="3" case="first-letter">User talk</namespace>
+      <namespace key="4" case="first-letter">Project</namespace>
+      <namespace key="5" case="first-letter">Project talk</namespace>
+      <namespace key="6" case="first-letter">File</namespace>
+      <namespace key="7" case="first-letter">File talk</namespace>
+      <namespace key="8" case="first-letter">MediaWiki</namespace>
+      <namespace key="9" case="first-letter">MediaWiki talk</namespace>
+      <namespace key="10" case="first-letter">Template</namespace>
+      <namespace key="11" case="first-letter">Template talk</namespace>
+      <namespace key="12" case="first-letter">Help</namespace>
+      <namespace key="13" case="first-letter">Help talk</namespace>
+      <namespace key="14" case="first-letter">Category</namespace>
+      <namespace key="15" case="first-letter">Category talk</namespace>
+      <namespace key="102" case="first-letter">Property</namespace>
+      <namespace key="103" case="first-letter">Property talk</namespace>
+      <namespace key="106" case="first-letter">Form</namespace>
+      <namespace key="107" case="first-letter">Form talk</namespace>
+      <namespace key="108" case="first-letter">Concept</namespace>
+      <namespace key="109" case="first-letter">Concept talk</namespace>
+      <namespace key="160" case="first-letter">UserGroup</namespace>
+      <namespace key="162" case="first-letter">ACL</namespace>
+    </namespaces>
+  </siteinfo>
+  <page>
+    <title>Category:Department</title>
+    <ns>14</ns>
+    <id>159</id>
+    <revision>
+      <id>166</id>
+      <timestamp>2013-02-22T06:06:33Z</timestamp>
+      <contributor>
+        <username>Jason</username>
+        <id>1</id>
+      </contributor>
+      <minor/>
+      <comment>BOT: Changing page text</comment>
+      <sha1>1e1wndvi8zx2njwk2wij19fh6mhrfmb</sha1>
+      <text xml:space="preserve" bytes="32">[[Has default form::Department]]</text>
+    </revision>
+  </page>
+  <page>
+    <title>UserGroup:TestGroup3</title>
+    <ns>160</ns>
+    <id>160</id>
+    <revision>
+      <id>167</id>
+      <timestamp>2013-02-22T06:06:33Z</timestamp>
+      <contributor>
+        <username>Jason</username>
+        <id>1</id>
+      </contributor>
+      <minor/>
+      <comment>BOT: Changing page text</comment>
+      <sha1>65uwr4qxbzlue3p78tjjnpuswgr2948</sha1>
+      <text xml:space="preserve" bytes="120">{{ACL UserGroup
+|GroupLeader=Test31
+|Users=Test32
+}}
+{{ACL UserGroup Permission
+|Permissions=read, write
+|Grant=Grant
+}}</text>
+    </revision>
+  </page>
+  <page>
+    <title>Property:Department Sister Group</title>
+    <ns>102</ns>
+    <id>161</id>
+    <revision>
+      <id>168</id>
+      <timestamp>2013-02-22T06:06:33Z</timestamp>
+      <contributor>
+        <username>Jason</username>
+        <id>1</id>
+      </contributor>
+      <minor/>
+      <comment>BOT: Changing page text</comment>
+      <sha1>5sjgyxh233abn9tfe2h4s0ob1071v8z</sha1>
+      <text xml:space="preserve" bytes="20">[[Has type::String]]</text>
+    </revision>
+  </page>
+  <page>
+    <title>Department1</title>
+    <ns>0</ns>
+    <id>162</id>
+    <revision>
+      <id>175</id>
+      <parentid>169</parentid>
+      <timestamp>2013-02-22T07:13:53Z</timestamp>
+      <contributor>
+        <username>Test11</username>
+        <id>2</id>
+      </contributor>
+      <sha1>7wdrd3zf884jas04voki6ugoi3zurpd</sha1>
+      <text xml:space="preserve" bytes="164">{{Department
+|Department Name=Sale
+|Primary Group=TestGroup1
+|Sister Groups=TestGroup2
+}}
+
+'''Also check the Permission in action dropdown(close to View history)'''</text>
+    </revision>
+  </page>
+  <page>
+    <title>UserGroup:TestGroup1</title>
+    <ns>160</ns>
+    <id>158</id>
+    <revision>
+      <id>165</id>
+      <timestamp>2013-02-22T06:05:49Z</timestamp>
+      <contributor>
+        <username>Jason</username>
+        <id>1</id>
+      </contributor>
+      <minor/>
+      <comment>BOT: Changing page text</comment>
+      <sha1>rghc2mxf22s42n4ceetq5twr0fjqa3j</sha1>
+      <text xml:space="preserve" bytes="120">{{ACL UserGroup
+|GroupLeader=Test11
+|Users=Test12
+}}
+{{ACL UserGroup Permission
+|Permissions=read, write
+|Grant=Grant
+}}</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Department</title>
+    <ns>10</ns>
+    <id>163</id>
+    <revision>
+      <id>170</id>
+      <timestamp>2013-02-22T06:06:34Z</timestamp>
+      <contributor>
+        <username>Jason</username>
+        <id>1</id>
+      </contributor>
+      <minor/>
+      <comment>BOT: Changing page text</comment>
+      <sha1>tbilag770zk7nwzn5xn8icfkr6xt0g2</sha1>
+      <text xml:space="preserve" bytes="635">&lt;noinclude&gt;&lt;/noinclude&gt;&lt;includeonly&gt;
+{| class='wikitable'
+!Name
+|[[Department Name::{{{Department Name|}}}]]
+|-
+!Primary Group
+|[[Department Primary Group::{{{Primary Group}}}]]
+|-
+!Sister Groups
+|{{#arraymap:{{{Sister Groups|}}}|,|@@@|[[Department Sister Group::@@@]]}}
+|}
+
+{{ACL Page Group Permission
+|UserGroup={{{Primary Group}}}
+|Permission=write, read, grant
+|Grant=Grant
+}}
+{{#arraymap:{{{Sister Groups|}}}|,|@@@
+|{{ACL Page Group Permission
+|UserGroup=@@@
+|Permission=read
+|Grant=Grant
+}}
+}}
+{{ACL Page Group Permission
+|UserGroup=All Users
+|Permission=write, read, grant
+|Grant=Reject
+}}
+
+[[Category:Department]]
+&lt;includeonly&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Property:Department Name</title>
+    <ns>102</ns>
+    <id>164</id>
+    <revision>
+      <id>171</id>
+      <timestamp>2013-02-22T06:06:34Z</timestamp>
+      <contributor>
+        <username>Jason</username>
+        <id>1</id>
+      </contributor>
+      <minor/>
+      <comment>BOT: Changing page text</comment>
+      <sha1>5sjgyxh233abn9tfe2h4s0ob1071v8z</sha1>
+      <text xml:space="preserve" bytes="20">[[Has type::String]]</text>
+    </revision>
+  </page>
+  <page>
+    <title>Form:Department</title>
+    <ns>106</ns>
+    <id>165</id>
+    <revision>
+      <id>172</id>
+      <timestamp>2013-02-22T06:06:34Z</timestamp>
+      <contributor>
+        <username>Jason</username>
+        <id>1</id>
+      </contributor>
+      <minor/>
+      <comment>BOT: Changing page text</comment>
+      <sha1>n65mhtd3crqg0qzgywh0xgtyzundt8u</sha1>
+      <text xml:space="preserve" bytes="492">&lt;noinclude&gt;
+{{#forminput:form=Department|link text=Create a department}}
+&lt;/noinclude&gt;&lt;includeonly&gt;
+{{{for template|Department|label=Department Information}}}
+{| class='wikitable'
+! Department Name
+| {{{field|Department Name|mandatory}}}
+|-
+! Department Primary Group
+| {{{field|Primary Group|mandatory|input type=SF_Select|function=allgroups:}}}
+|-
+! Department Sister Group
+| {{{field|Sister Groups|list|size=3|input type=SF_Select|function=allgroups:}}}
+|}
+{{{end template}}}
+&lt;/includeonly&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Property:Department Primary Group</title>
+    <ns>102</ns>
+    <id>166</id>
+    <revision>
+      <id>173</id>
+      <timestamp>2013-02-22T06:06:34Z</timestamp>
+      <contributor>
+        <username>Jason</username>
+        <id>1</id>
+      </contributor>
+      <minor/>
+      <comment>BOT: Changing page text</comment>
+      <sha1>5sjgyxh233abn9tfe2h4s0ob1071v8z</sha1>
+      <text xml:space="preserve" bytes="20">[[Has type::String]]</text>
+    </revision>
+  </page>
+  <page>
+    <title>UserGroup:TestGroup2</title>
+    <ns>160</ns>
+    <id>167</id>
+    <revision>
+      <id>174</id>
+      <timestamp>2013-02-22T06:06:35Z</timestamp>
+      <contributor>
+        <username>Jason</username>
+        <id>1</id>
+      </contributor>
+      <minor/>
+      <comment>BOT: Changing page text</comment>
+      <sha1>rjvobix8hu34ee9h8b8z7xr8myofqwb</sha1>
+      <text xml:space="preserve" bytes="120">{{ACL UserGroup
+|GroupLeader=Test21
+|Users=Test22
+}}
+{{ACL UserGroup Permission
+|Permissions=read, write
+|Grant=Grant
+}}</text>
+    </revision>
+  </page>
+  <page>
+    <title>AccessControlDemo</title>
+    <ns>0</ns>
+    <id>168</id>
+    <revision>
+      <id>176</id>
+      <timestamp>2013-02-22T07:18:01Z</timestamp>
+      <contributor>
+        <username>Jason</username>
+        <id>1</id>
+      </contributor>
+      <comment>Created page with &quot;Go to [[Department1]]. Users in TestGroup1(test11, test12) have all rights. Users in TestGroup2(test21, test22) have read right. Users in TestGroup3(test31,test32) have no rig...&quot;</comment>
+      <sha1>g530ab0ogxy515imuer1pxaum5hpvtu</sha1>
+      <text xml:space="preserve" bytes="299">Go to [[Department1]]. Users in TestGroup1(test11, test12) have all rights. Users in TestGroup2(test21, test22) have read right. Users in TestGroup3(test31,test32) have no right.  Check how the permission is defined in [[:Template:Department| Department Template]]
+
+Password for all users is 123456.</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:ACL UserGroup</title>
+    <ns>10</ns>
+    <id>144</id>
+    <revision>
+      <id>151</id>
+      <timestamp>2013-02-22T05:59:23Z</timestamp>
+      <contributor>
+        <username>Jason</username>
+        <id>1</id>
+      </contributor>
+      <minor/>
+      <comment>BOT: Changing page text</comment>
+      <sha1>axk2jvc0t9wfcgdx27869qbzu8xlci4</sha1>
+      <text xml:space="preserve" bytes="370">&lt;noinclude&gt;
+Users in A group and Group default access control rules.
+
+&lt;/noinclude&gt;&lt;includeonly&gt;
+Group Leader: [[ACL UserGroup Leader::{{{GroupLeader|}}}]]
+Users:{{#arraymap:{{{Users|}}}|,|x|[[ACL User::x]]}}
+----
+{{#ask: [[ACL Permission for a group::{{FULLPAGENAME}}]]|mainlabel=-|?ACL Permissions|?ACL Grant=Grant or Reject}}
+
+[[Category:ACL UserGroup]]
+&lt;/includeonly&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:ACL UserGroup Permission</title>
+    <ns>10</ns>
+    <id>140</id>
+    <revision>
+      <id>147</id>
+      <timestamp>2013-02-22T05:59:22Z</timestamp>
+      <contributor>
+        <username>Jason</username>
+        <id>1</id>
+      </contributor>
+      <minor/>
+      <comment>BOT: Changing page text</comment>
+      <sha1>j6tqgqmfua2jc9zia6h5zf66c0bzwur</sha1>
+      <text xml:space="preserve" bytes="202">&lt;noinclude&gt;
+Edit the page to see the template text.
+&lt;/noinclude&gt;&lt;includeonly&gt;
+{{#set_internal:ACL Permission for a group
+|ACL Permissions={{{Permissions}}}
+|ACL Grant={{{Grant|Grant}}}
+}}
+&lt;/includeonly&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:ACL Page Group Permission</title>
+    <ns>10</ns>
+    <id>151</id>
+    <revision>
+      <id>158</id>
+      <timestamp>2013-02-22T05:59:25Z</timestamp>
+      <contributor>
+        <username>Jason</username>
+        <id>1</id>
+      </contributor>
+      <minor/>
+      <comment>BOT: Changing page text</comment>
+      <sha1>6420udst3eo3p4fm5700fy2rwn5lchy</sha1>
+      <text xml:space="preserve" bytes="235">&lt;noinclude&gt;
+Edit the page to see the template text.
+&lt;/noinclude&gt;&lt;includeonly&gt;
+{{#set_internal:ACL Group permission for page
+|ACL UserGroup={{{UserGroup}}}
+|ACL Permissions={{{Permission}}}
+|ACL Grant={{{Grant|Grant}}}
+}}
+&lt;/includeonly&gt;</text>
+    </revision>
+  </page>
+</mediawiki>
